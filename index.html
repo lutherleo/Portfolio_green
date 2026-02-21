@@ -34,6 +34,8 @@
       <li><a href="#work">WORK</a></li>
       <li><a href="#osiris">RESEARCH</a></li>
       <li><a href="#experience">HISTORY</a></li>
+      <li><a href="#hobbies">HOBBIES</a></li>
+      <li><a href="#interviews">INTERVIEWS</a></li>
       <li><a href="#blog">BLOG</a></li>
       <li><a href="#contact">CONTACT</a></li>
     </ul>
@@ -48,6 +50,8 @@
     <a href="#work"       class="mob-item">WORK</a>
     <a href="#osiris"     class="mob-item">RESEARCH</a>
     <a href="#experience" class="mob-item">HISTORY</a>
+    <a href="#hobbies"    class="mob-item">HOBBIES</a>
+    <a href="#interviews" class="mob-item">INTERVIEWS</a>
     <a href="#blog"       class="mob-item">BLOG</a>
     <a href="#contact"    class="mob-item">CONTACT</a>
   </div>
@@ -151,6 +155,22 @@
             <a href="https://github.com/lutherleo" target="_blank" class="link-arrow">GitHub ↗ <span></span></a>
             <a href="https://www.linkedin.com/in/lovekush-pranu" target="_blank" class="link-arrow">LinkedIn ↗ <span></span></a>
           </div>
+          <div class="ctf-profiles">
+            <a href="https://ctftime.org/team/439/" target="_blank" class="ctf-profile-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              <div class="cpb-text">
+                <span class="cpb-name">CTFtime</span>
+                <span class="cpb-sub">Team Profile & Rankings</span>
+              </div>
+            </a>
+            <a href="https://www.wechall.net/profile/lutherleo" target="_blank" class="ctf-profile-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 1 0 20M12 2a14.5 14.5 0 0 0 0 20M2 12h20"/></svg>
+              <div class="cpb-text">
+                <span class="cpb-name">WeChall</span>
+                <span class="cpb-sub">lutherleo — Hacking Score</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -223,7 +243,40 @@
       <h2 class="work-title">Featured <em>projects</em></h2>
     </div>
 
-    <!-- Project 1: xv6 OS -->
+    <!-- Project 1: Hot-Fuzz / Kernel Fuzzer -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">KERNEL FUZZING</div>
+        <div class="proj-year-badge">2026</div>
+        <div class="neu-art neu-fuzz">
+          <div class="na-fuzz-terminal">
+            <div class="na-term-bar"><span></span><span></span><span></span></div>
+            <div class="na-term-body">
+              <div class="na-tl">$ ./hot-fuzz --target kernel</div>
+              <div class="na-tl accent">[*] Fuzzing TCP/IP stack...</div>
+              <div class="na-tl">    corpus: 2847 inputs</div>
+              <div class="na-tl accent">[!] Race condition found!</div>
+              <div class="na-tl">    offset: 0x7fff8a20</div>
+              <div class="na-tl">    coverage: 94.2%</div>
+              <div class="na-tl blink">▌</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">hot-fuzz<br/>Kernel Fuzzer</h3>
+          <p class="pi-sub">OSIRIS Lab — Kernel Network Stack</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">Semantic fuzzing framework targeting the Linux kernel's network stack for race conditions — part of the OSIRIS Lab research initiative. Collaborative fork of ChinmayShringi/hot-fuzz, extended with custom Go-based corpus generation and race condition detection heuristics.</p>
+          <div class="pi-tags"><span>Go</span><span>Kernel Fuzzing</span><span>Race Conditions</span><span>TCP/IP Stack</span><span>OSIRIS Lab</span></div>
+          <a href="https://github.com/lutherleo" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: xv6 OS -->
     <div class="project-block">
       <div class="proj-img">
         <div class="proj-label-float">KERNEL SECURITY</div>
@@ -265,7 +318,7 @@
       </div>
     </div>
 
-    <!-- Project 2: Adversarial ML -->
+    <!-- Project 3: Adversarial ML -->
     <div class="project-block">
       <div class="proj-img">
         <div class="proj-label-float">ADVERSARIAL ML</div>
@@ -308,7 +361,7 @@
       </div>
     </div>
 
-    <!-- Project 3: CHIP-8 Emulator -->
+    <!-- Project 4: CHIP-8 Emulator -->
     <div class="project-block">
       <div class="proj-img">
         <div class="proj-label-float">EMULATION</div>
@@ -346,7 +399,7 @@
       </div>
     </div>
 
-    <!-- Project 4: Vulnerability Scanner -->
+    <!-- Project 5: Vulnerability Scanner -->
     <div class="project-block">
       <div class="proj-img">
         <div class="proj-label-float">SECURITY TOOL</div>
@@ -376,39 +429,6 @@
           <p class="pi-desc">A CLI tool to quickly scan binaries and applications for common vulnerability classes — weak permissions, outdated libraries, CVE matches, and ROP gadget detection. Designed for rapid triage in CTF and real-world assessments.</p>
           <div class="pi-tags"><span>Security Analysis</span><span>Binary Exploitation</span><span>CVE Detection</span><span>CLI Tool</span></div>
           <a href="https://github.com/lutherleo/vulnerability-scanner" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project 5: Hot-Fuzz / Kernel Fuzzer -->
-    <div class="project-block">
-      <div class="proj-img">
-        <div class="proj-label-float">KERNEL FUZZING</div>
-        <div class="proj-year-badge">2026</div>
-        <div class="neu-art neu-fuzz">
-          <div class="na-fuzz-terminal">
-            <div class="na-term-bar"><span></span><span></span><span></span></div>
-            <div class="na-term-body">
-              <div class="na-tl">$ ./hot-fuzz --target kernel</div>
-              <div class="na-tl accent">[*] Fuzzing TCP/IP stack...</div>
-              <div class="na-tl">    corpus: 2847 inputs</div>
-              <div class="na-tl accent">[!] Race condition found!</div>
-              <div class="na-tl">    offset: 0x7fff8a20</div>
-              <div class="na-tl">    coverage: 94.2%</div>
-              <div class="na-tl blink">▌</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="proj-info container">
-        <div class="pi-left">
-          <h3 class="pi-title">hot-fuzz<br/>Kernel Fuzzer</h3>
-          <p class="pi-sub">OSIRIS Lab — Kernel Network Stack</p>
-        </div>
-        <div class="pi-right">
-          <p class="pi-desc">Semantic fuzzing framework targeting the Linux kernel's network stack for race conditions — part of the OSIRIS Lab research initiative. Collaborative fork of ChinmayShringi/hot-fuzz, extended with custom Go-based corpus generation and race condition detection heuristics.</p>
-          <div class="pi-tags"><span>Go</span><span>Kernel Fuzzing</span><span>Race Conditions</span><span>TCP/IP Stack</span><span>OSIRIS Lab</span></div>
-          <a href="https://github.com/lutherleo" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
         </div>
       </div>
     </div>
@@ -673,6 +693,98 @@
             <li>Zero-Trust Architecture</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOBBIES ───────────────────────────────── -->
+  <section class="hobbies section" id="hobbies">
+    <div class="container">
+      <p class="sec-label">BEYOND THE TERMINAL</p>
+      <h2 class="hobbies-title">What I do when I'm<br/><em>not hacking.</em></h2>
+      <p class="hobbies-sub">Security never really switches off — but when I step away from the screen, these are the things that keep me sharp, grounded, and sane.</p>
+      <div class="hobbies-grid">
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3>CTF Competitions</h3>
+          <p>Competing in Capture the Flag events is my favourite sport. Solving cryptography, pwn, web, and reversing challenges under pressure keeps my offensive skills razor-sharp — and it's genuinely fun.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4v6a6 6 0 0 0 12 0V4"/><line x1="4" y1="20" x2="20" y2="20"/></svg>
+          </div>
+          <h3>Powerlifting</h3>
+          <p>I was on the Powerlifting Team at NIT Calicut and the habit stuck. There's a satisfying symmetry between lifting and debugging — both demand patience, discipline, and knowing exactly where to apply force.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Kernel Tinkering</h3>
+          <p>Modifying OS kernels for fun — not just for research. From patching xv6 with custom syscalls to experimenting with eBPF programs, I enjoy going as low-level as possible.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Reading Research Papers</h3>
+          <p>I read academic security papers for fun — from Madry et al. on adversarial training to classic systems security literature. Staying current with research is what separates a practitioner from a technician.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERVIEWS ─────────────────────────────── -->
+  <section class="interviews section" id="interviews">
+    <div class="container">
+      <p class="sec-label">INTERVIEWS</p>
+      <h2 class="interviews-title">People I've <em>interviewed</em></h2>
+      <p class="interviews-sub">A series of conversations with practitioners, researchers, and builders working at the intersection of security, systems, and the future of the field.</p>
+      <div class="interviews-grid">
+
+        <div class="interview-card neu-card" style="padding:1.5rem;">
+          <p class="interview-label">Interview · 01</p>
+          <a href="https://www.youtube.com/watch?v=0F-sB8MU9kQ" target="_blank" rel="noopener" class="interview-thumb-wrap">
+            <img src="https://img.youtube.com/vi/0F-sB8MU9kQ/hqdefault.jpg" alt="Interview 1" loading="lazy" />
+            <div class="interview-play-btn">
+              <div class="interview-play-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0f0a"><polygon points="6,4 20,12 6,20"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="interview-card neu-card" style="padding:1.5rem;">
+          <p class="interview-label">Interview · 02</p>
+          <a href="https://www.youtube.com/watch?v=pL5Sm-xS1Rk" target="_blank" rel="noopener" class="interview-thumb-wrap">
+            <img src="https://img.youtube.com/vi/pL5Sm-xS1Rk/hqdefault.jpg" alt="Interview 2" loading="lazy" />
+            <div class="interview-play-btn">
+              <div class="interview-play-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0f0a"><polygon points="6,4 20,12 6,20"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="interview-card neu-card" style="padding:1.5rem;">
+          <p class="interview-label">Interview · 03</p>
+          <a href="https://www.youtube.com/watch?v=XJz1TSmRWjY" target="_blank" rel="noopener" class="interview-thumb-wrap">
+            <img src="https://img.youtube.com/vi/XJz1TSmRWjY/hqdefault.jpg" alt="Interview 3" loading="lazy" />
+            <div class="interview-play-btn">
+              <div class="interview-play-circle">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="#0a0f0a"><polygon points="6,4 20,12 6,20"/></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
