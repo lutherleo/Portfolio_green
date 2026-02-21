@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Kush Pranu — Cybersecurity Engineer</title>
+  <meta name="description" content="NYU Cybersecurity MS student, Red Team Researcher, CTF Captain & OSIRIS Lab Research Coordinator. Based in Brooklyn, NY." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="pre-inner">
+      <div class="pre-logo">LKP.</div>
+      <div class="pre-bar"><div class="pre-fill" id="preFill"></div></div>
+      <span class="pre-pct" id="prePct">0%</span>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Love Kush Pranu</a>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#work">WORK</a></li>
+      <li><a href="#osiris">RESEARCH</a></li>
+      <li><a href="#experience">HISTORY</a></li>
+      <li><a href="#blog">BLOG</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mob-menu" id="mobMenu">
+    <a href="#about"      class="mob-item">ABOUT</a>
+    <a href="#work"       class="mob-item">WORK</a>
+    <a href="#osiris"     class="mob-item">RESEARCH</a>
+    <a href="#experience" class="mob-item">HISTORY</a>
+    <a href="#blog"       class="mob-item">BLOG</a>
+    <a href="#contact"    class="mob-item">CONTACT</a>
+  </div>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-circle" id="heroCircle"></div>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow reveal">Cybersecurity Engineer · NYU Tandon '26 · Brooklyn, NY</p>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="ht-line">BREAKING</span>
+          <span class="ht-line">THINGS TO</span>
+          <span class="ht-line stroke-text">BUILD</span>
+          <span class="ht-line">THEM</span>
+          <span class="ht-line accent-text">BETTER</span>
+        </h1>
+      </div>
+      <div class="hero-right">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <span class="hero-available">
+        <span class="avail-dot"></span>Open to Work — Security Roles
+      </span>
+      <span class="hero-scroll-hint">Scroll ↓</span>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ────────────────────────────────── -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>PENETRATION TESTING</span><span class="sep">·</span>
+      <span>RED TEAM OPS</span><span class="sep">·</span>
+      <span>NETWORK SECURITY</span><span class="sep">·</span>
+      <span>CTF CAPTAIN @ NYU</span><span class="sep">·</span>
+      <span>SYSTEMS PROGRAMMING</span><span class="sep">·</span>
+      <span>ADVERSARIAL ML</span><span class="sep">·</span>
+      <span>OSIRIS LAB RESEARCH COORDINATOR</span><span class="sep">·</span>
+      <span>KERNEL DEVELOPMENT</span><span class="sep">·</span>
+      <span>PENETRATION TESTING</span><span class="sep">·</span>
+      <span>RED TEAM OPS</span><span class="sep">·</span>
+      <span>NETWORK SECURITY</span><span class="sep">·</span>
+      <span>CTF CAPTAIN @ NYU</span><span class="sep">·</span>
+      <span>SYSTEMS PROGRAMMING</span><span class="sep">·</span>
+      <span>ADVERSARIAL ML</span><span class="sep">·</span>
+      <span>OSIRIS LAB RESEARCH COORDINATOR</span><span class="sep">·</span>
+      <span>KERNEL DEVELOPMENT</span><span class="sep">·</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ──────────────────────────────────── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <p class="sec-label">ABOUT ME</p>
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="photo-box">
+            <img src="photo.jpeg" alt="Love Kush Pranu" class="about-photo-img" />
+            <div class="photo-badge">
+              <span class="badge-mono">GPA 3.9 / 4.0</span>
+              <span class="badge-label">NYU Tandon MS '26</span>
+            </div>
+          </div>
+          <!-- stat cards -->
+          <div class="about-stat-cards">
+            <div class="asc neu-card">
+              <span class="asc-num">9</span>
+              <span class="asc-lbl">Research Projects<br/>Coordinated</span>
+            </div>
+            <div class="asc neu-card">
+              <span class="asc-num">23+</span>
+              <span class="asc-lbl">Certifications<br/>&amp; Credentials</span>
+            </div>
+            <div class="asc neu-card">
+              <span class="asc-num">61</span>
+              <span class="asc-lbl">GitHub<br/>Repositories</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-body">
+          <h2 class="about-headline">
+            NYU cybersecurity researcher<br/>
+            with a strong focus on<br/>
+            red-teaming, systems security<br/>
+            &amp; <em>adversarial defence.</em>
+          </h2>
+          <p class="about-p">I'm Love Kush Pranu — a cybersecurity engineer pursuing my MS at NYU Tandon School of Engineering (GPA 3.9/4.0), expected May 2026. I graduated from NIT Calicut with a B.Tech in EEE, where circuits and systems sparked a deep passion for digital security.</p>
+          <p class="about-p">I serve as <strong>Research Coordinator at OSIRIS Lab</strong> — NYU's premier security research group — managing 9 active research projects spanning kernel fuzzing, adversarial ML, CTF tooling, and IoT security. I'm also a CTF Team Member and help run world-class competitions like CSAW. I love going deep: from building a CHIP-8 emulator entirely in C to modifying the xv6 kernel with ASLR and W^X protections.</p>
+          <div class="about-tags">
+            <span>CompTIA Security+</span>
+            <span>CySA+</span>
+            <span>IBM Cybersecurity</span>
+            <span>MITRE eCTF 2025</span>
+            <span>CCNA — In Progress</span>
+            <span>eJPT — In Progress</span>
+          </div>
+          <div class="about-actions-row">
+            <a href="mailto:lp2989@nyu.edu" class="link-arrow">Get In Touch <span>→</span></a>
+            <a href="https://github.com/lutherleo" target="_blank" class="link-arrow">GitHub ↗ <span></span></a>
+            <a href="https://www.linkedin.com/in/lovekush-pranu" target="_blank" class="link-arrow">LinkedIn ↗ <span></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT I DO ──────────────────────────────── -->
+  <section class="services section" id="services">
+    <div class="container">
+      <p class="sec-label">WHAT I DO</p>
+      <h2 class="services-title">I can help you with.</h2>
+      <div class="services-list">
+        <div class="service-row">
+          <div class="sr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="sr-body">
+            <h3>Penetration Testing &amp; Red Team</h3>
+            <p>Adversarial simulations across enterprise environments — improved defense efficiency by 30% at Pentadots. Web exploitation, cryptography, hardware security, CTF challenge design and infrastructure.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="sr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h10M7 12h6"/></svg>
+          </div>
+          <div class="sr-body">
+            <h3>Network Security Architecture</h3>
+            <p>Zero-trust frameworks, microsegmentation, VLAN/Cisco ASA configuration, VPN/IPsec, firewall policies, IDS/IPS, BGP/OSPF, DNS security and large-scale network monitoring.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="sr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="sr-body">
+            <h3>Systems &amp; Low-Level Programming</h3>
+            <p>xv6 kernel security enhancements (ASLR, W^X, stack canaries), OS-level isolation, CHIP-8 emulation, C/C++/Python/Rust, Docker, Linux security internals, iptables/netfilter.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <div class="sr-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M12 22V12M3.27 6.96L12 12.01l8.73-5.05"/></svg>
+          </div>
+          <div class="sr-body">
+            <h3>Adversarial ML &amp; Cloud Security</h3>
+            <p>PGD adversarial training, FGSM/C&amp;W attack analysis via CleverHans &amp; ART, AWS IAM/EC2/S3 hardening, CI/CD pipeline security, model robustness testing on production ML systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS MARQUEE ─────────────────────────── -->
+  <div class="skills-marquee">
+    <div class="skills-track">
+      <span>Python</span><span>·</span><span>C / C++</span><span>·</span><span>Rust</span><span>·</span>
+      <span>Bash</span><span>·</span><span>Kali Linux</span><span>·</span><span>Wireshark</span><span>·</span>
+      <span>Nmap</span><span>·</span><span>Cisco ASA</span><span>·</span><span>Docker</span><span>·</span>
+      <span>AWS</span><span>·</span><span>TensorFlow</span><span>·</span><span>TCP/IP · BGP · OSPF</span><span>·</span>
+      <span>iptables</span><span>·</span><span>Ansible</span><span>·</span><span>xv6 Kernel</span><span>·</span>
+      <span>SDL2</span><span>·</span><span>CleverHans</span><span>·</span><span>Go</span><span>·</span>
+      <span>Python</span><span>·</span><span>C / C++</span><span>·</span><span>Rust</span><span>·</span>
+      <span>Bash</span><span>·</span><span>Kali Linux</span><span>·</span><span>Wireshark</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ── PROJECTS ────────────────────────────────── -->
+  <section class="work section" id="work">
+    <div class="container">
+      <p class="sec-label">SELECTED WORK</p>
+      <h2 class="work-title">Featured <em>projects</em></h2>
+    </div>
+
+    <!-- Project 1: xv6 OS -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">KERNEL SECURITY</div>
+        <div class="proj-year-badge">2024 — 2025</div>
+        <!-- Neumorphic Art: OS/Kernel theme -->
+        <div class="neu-art neu-kernel">
+          <div class="na-grid">
+            <div class="na-cell active"></div><div class="na-cell"></div><div class="na-cell active"></div><div class="na-cell"></div><div class="na-cell active"></div>
+            <div class="na-cell"></div><div class="na-cell active"></div><div class="na-cell"></div><div class="na-cell active"></div><div class="na-cell"></div>
+            <div class="na-cell active"></div><div class="na-cell"></div><div class="na-cell active"></div><div class="na-cell"></div><div class="na-cell active"></div>
+          </div>
+          <div class="na-center-art">
+            <div class="na-hex">
+              <svg viewBox="0 0 100 100" width="100" height="100">
+                <polygon points="50,5 90,27.5 90,72.5 50,95 10,72.5 10,27.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <polygon points="50,20 77,35 77,65 50,80 23,65 23,35" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                <text x="50" y="53" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="currentColor">xv6-OS</text>
+              </svg>
+            </div>
+          </div>
+          <div class="na-code-lines">
+            <span>$ sudo aslr --enable</span>
+            <span>$ wx-policy --enforce</span>
+            <span>$ stack-canary --init</span>
+            <span>$ audit-log --start</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">xv6 OS Security<br/>Enhancements</h3>
+          <p class="pi-sub">Kernel-Level Security Research</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">Implemented kernel-level security enhancements to the xv6 OS — ASLR, W^X memory policies, stack canaries, and process isolation. Conducted memory safety analysis and developed custom system calls for security auditing. Built on the Lind sandbox research at NYU.</p>
+          <div class="pi-tags"><span>C</span><span>xv6 Kernel</span><span>ASLR</span><span>W^X</span><span>Stack Canaries</span><span>System Calls</span></div>
+          <a href="https://github.com/lutherleo/xv6-OS" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: Adversarial ML -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">ADVERSARIAL ML</div>
+        <div class="proj-year-badge">2025</div>
+        <div class="neu-art neu-ml">
+          <div class="na-nn">
+            <div class="na-nn-layer">
+              <div class="na-node"></div><div class="na-node"></div><div class="na-node"></div>
+            </div>
+            <div class="na-nn-layer">
+              <div class="na-node active"></div><div class="na-node"></div><div class="na-node active"></div><div class="na-node"></div>
+            </div>
+            <div class="na-nn-layer">
+              <div class="na-node"></div><div class="na-node active"></div><div class="na-node"></div><div class="na-node active"></div><div class="na-node"></div>
+            </div>
+            <div class="na-nn-layer">
+              <div class="na-node active"></div><div class="na-node"></div><div class="na-node active"></div><div class="na-node"></div>
+            </div>
+            <div class="na-nn-layer">
+              <div class="na-node"></div><div class="na-node active"></div><div class="na-node"></div>
+            </div>
+          </div>
+          <div class="na-stats">
+            <div class="na-stat-row"><span class="na-bar-label">PGD</span><div class="na-bar"><div class="na-bar-fill" style="width:90%"></div></div><span>90%</span></div>
+            <div class="na-stat-row"><span class="na-bar-label">FGSM</span><div class="na-bar"><div class="na-bar-fill" style="width:88%"></div></div><span>88%</span></div>
+            <div class="na-stat-row"><span class="na-bar-label">C&W</span><div class="na-bar"><div class="na-bar-fill" style="width:55%"></div></div><span>55%</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">Adversarial<br/>Robustness in DNNs</h3>
+          <p class="pi-sub">NYU Tandon — ML Security Research</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">Implemented PGD adversarial training on MNIST, validating Madry et al. (2018) — achieving ~90% accuracy against PGD/FGSM attacks while identifying weaknesses under C&amp;W attacks and distribution shifts. Re-engineered TensorFlow 1.x → 2.x for CleverHans and ART experiments.</p>
+          <div class="pi-tags"><span>Python</span><span>TensorFlow</span><span>CleverHans</span><span>ART</span><span>PGD</span><span>FGSM</span><span>C&amp;W</span></div>
+          <a href="https://github.com/lutherleo/MLClass" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: CHIP-8 Emulator -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">EMULATION</div>
+        <div class="proj-year-badge">2024</div>
+        <div class="neu-art neu-chip8">
+          <div class="na-screen">
+            <div class="na-pixel-grid" id="pixelGrid">
+              <!-- JS will fill this -->
+            </div>
+          </div>
+          <div class="na-chip-info">
+            <div class="na-reg">V0: <span>0xAF</span></div>
+            <div class="na-reg">PC: <span>0x200</span></div>
+            <div class="na-reg">SP: <span>0x0F</span></div>
+            <div class="na-reg">OP: <span>0xD011</span></div>
+          </div>
+          <div class="na-keys">
+            <span>1</span><span>2</span><span>3</span><span>C</span>
+            <span>4</span><span>5</span><span>6</span><span>D</span>
+            <span>7</span><span>8</span><span>9</span><span>E</span>
+            <span>A</span><span>0</span><span>B</span><span>F</span>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">CHIP-8<br/>Emulator</h3>
+          <p class="pi-sub">Systems Programming — C / SDL2</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">A fully functional CHIP-8 emulator from scratch — all 35 opcodes, 64×32 pixel XOR-based sprite rendering, SDL2 graphics and input, proper timing with delay/sound timers, and 16-key hexadecimal keypad. Runs all classic ROMs: Pong, Tetris, Space Invaders, and more.</p>
+          <div class="pi-tags"><span>C</span><span>SDL2</span><span>CPU Emulation</span><span>Memory Management</span><span>Bitwise Ops</span></div>
+          <a href="https://github.com/lutherleo/CHIP-8_emulator" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Vulnerability Scanner -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">SECURITY TOOL</div>
+        <div class="proj-year-badge">2026</div>
+        <div class="neu-art neu-scanner">
+          <div class="na-scan-circle">
+            <div class="na-scan-ring sr1"></div>
+            <div class="na-scan-ring sr2"></div>
+            <div class="na-scan-ring sr3"></div>
+            <div class="na-scan-beam"></div>
+            <div class="na-scan-center">SCAN</div>
+          </div>
+          <div class="na-scan-results">
+            <div class="na-vuln high">● CVE-2024-xxxx  HIGH</div>
+            <div class="na-vuln med">● Weak perms     MED</div>
+            <div class="na-vuln low">● Stale binary   LOW</div>
+            <div class="na-vuln ok">✓ No ROP chains</div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">Vulnerability<br/>Scanner</h3>
+          <p class="pi-sub">Binary Analysis Security Tool</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">A CLI tool to quickly scan binaries and applications for common vulnerability classes — weak permissions, outdated libraries, CVE matches, and ROP gadget detection. Designed for rapid triage in CTF and real-world assessments.</p>
+          <div class="pi-tags"><span>Security Analysis</span><span>Binary Exploitation</span><span>CVE Detection</span><span>CLI Tool</span></div>
+          <a href="https://github.com/lutherleo/vulnerability-scanner" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5: Hot-Fuzz / Kernel Fuzzer -->
+    <div class="project-block">
+      <div class="proj-img">
+        <div class="proj-label-float">KERNEL FUZZING</div>
+        <div class="proj-year-badge">2026</div>
+        <div class="neu-art neu-fuzz">
+          <div class="na-fuzz-terminal">
+            <div class="na-term-bar"><span></span><span></span><span></span></div>
+            <div class="na-term-body">
+              <div class="na-tl">$ ./hot-fuzz --target kernel</div>
+              <div class="na-tl accent">[*] Fuzzing TCP/IP stack...</div>
+              <div class="na-tl">    corpus: 2847 inputs</div>
+              <div class="na-tl accent">[!] Race condition found!</div>
+              <div class="na-tl">    offset: 0x7fff8a20</div>
+              <div class="na-tl">    coverage: 94.2%</div>
+              <div class="na-tl blink">▌</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info container">
+        <div class="pi-left">
+          <h3 class="pi-title">hot-fuzz<br/>Kernel Fuzzer</h3>
+          <p class="pi-sub">OSIRIS Lab — Kernel Network Stack</p>
+        </div>
+        <div class="pi-right">
+          <p class="pi-desc">Semantic fuzzing framework targeting the Linux kernel's network stack for race conditions — part of the OSIRIS Lab research initiative. Collaborative fork of ChinmayShringi/hot-fuzz, extended with custom Go-based corpus generation and race condition detection heuristics.</p>
+          <div class="pi-tags"><span>Go</span><span>Kernel Fuzzing</span><span>Race Conditions</span><span>TCP/IP Stack</span><span>OSIRIS Lab</span></div>
+          <a href="https://github.com/lutherleo" target="_blank" class="link-arrow">View on GitHub ↗ <span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OSIRIS LAB RESEARCH ────────────────────── -->
+  <section class="osiris section" id="osiris">
+    <div class="container">
+      <p class="sec-label">RESEARCH COORDINATION</p>
+      <div class="osiris-header">
+        <div>
+          <h2 class="osiris-title">OSIRIS Lab — <em>Research Coordinator</em></h2>
+          <p class="osiris-sub">Managing 9 active research projects · NYU Tandon School of Engineering · Feb 2026 – Present</p>
+        </div>
+        <a href="https://osiris.cyber.nyu.edu/" target="_blank" class="link-arrow osiris-link">OSIRIS Lab ↗ <span></span></a>
+      </div>
+      <p class="osiris-desc">As Research Coordinator at OSIRIS Lab — NYU's premier cybersecurity research group — I oversee and guide 9 active security research projects spanning kernel exploitation, AI security, embedded systems, and CTF infrastructure. Each project is mentored to students across skill levels.</p>
+
+      <div class="osiris-grid">
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag advanced">ADVANCED</span>
+            <span class="oc-num">01</span>
+          </div>
+          <h4>Semantic Fuzzing for Kernel Network Stack Race Conditions</h4>
+          <p>Developing a semantic-aware fuzzer to detect race conditions in the Linux kernel's network stack using coverage-guided mutation and concurrency analysis.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Love Kush</span>
+            <span class="oc-lang">Go · C</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag beginner">BEGINNER</span>
+            <span class="oc-num">02</span>
+          </div>
+          <h4>MCP Server for Binary Exploitation</h4>
+          <p>Building an MCP (Model Context Protocol) server that assists in binary exploitation workflows, automating gadget finding, ROP chain construction, and exploit generation.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Jesse</span>
+            <span class="oc-lang">Python · Pwn</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag intermediate">INTERMEDIATE</span>
+            <span class="oc-num">03</span>
+          </div>
+          <h4>LLM-Based CTF Solver with Reasoning Extension</h4>
+          <p>Augmenting large language models with chain-of-thought reasoning to autonomously solve CTF challenges across crypto, pwn, and web categories.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Prajesh</span>
+            <span class="oc-lang">Python · LLM</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag advanced">ADVANCED</span>
+            <span class="oc-num">04</span>
+          </div>
+          <h4>PUF-Based Authentication Protocol</h4>
+          <p>Designing a physically unclonable function (PUF) based authentication protocol for resource-constrained embedded devices resistant to side-channel and replay attacks.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Vaughn</span>
+            <span class="oc-lang">Hardware · C</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag int-adv">INTERMEDIATE–ADVANCED</span>
+            <span class="oc-num">05</span>
+          </div>
+          <h4>Secure ADS-B Framework</h4>
+          <p>Developing a secure Automatic Dependent Surveillance–Broadcast (ADS-B) framework to authenticate aircraft transponder signals and defend against spoofing and injection attacks.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Aaditya</span>
+            <span class="oc-lang">SDR · Python</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag intermediate">INTERMEDIATE</span>
+            <span class="oc-num">06</span>
+          </div>
+          <h4>ROS 2 and RTOS Security</h4>
+          <p>Analyzing security vulnerabilities in ROS 2 robotic middleware and real-time operating systems (RTOS), with focus on privilege escalation and message injection attacks.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Prinn</span>
+            <span class="oc-lang">ROS 2 · C++</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag intermediate">INTERMEDIATE</span>
+            <span class="oc-num">07</span>
+          </div>
+          <h4>AI Privacy Exploitation in IoT Devices</h4>
+          <p>Investigating how AI models embedded in IoT devices can be exploited for privacy leakage through model inversion, membership inference, and side-channel analysis.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Nidhi</span>
+            <span class="oc-lang">Python · IoT</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag all">ALL LEVELS</span>
+            <span class="oc-num">08</span>
+          </div>
+          <h4>Pastebin Data Leak Analysis</h4>
+          <p>Large-scale scraping and analysis of Pastebin and similar platforms to identify leaked credentials, API keys, PII, and sensitive organisational data for responsible disclosure.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Maya</span>
+            <span class="oc-lang">Python · OSINT</span>
+          </div>
+        </div>
+
+        <div class="osiris-card neu-card">
+          <div class="oc-header">
+            <span class="oc-tag intermediate">INTERMEDIATE</span>
+            <span class="oc-num">09</span>
+          </div>
+          <h4>Evolving CTFs for AI</h4>
+          <p>Designing adaptive CTF challenges that evolve in difficulty and category based on an AI solver's capabilities — creating a co-evolutionary arms race between AI and human-designed puzzles.</p>
+          <div class="oc-meta">
+            <span class="oc-lead">Lead: Kim</span>
+            <span class="oc-lang">Python · AI</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE / HISTORY ───────────────────── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <p class="sec-label">HISTORY</p>
+      <div class="exp-list">
+        <div class="exp-row">
+          <span class="exp-year">NOW</span>
+          <div class="exp-body">
+            <h3>Research Coordinator — OSIRIS Lab, NYU</h3>
+            <p>New York University · Feb 2026 – Present · New York City (Hybrid)</p>
+            <p class="exp-detail">Managing 9 active security research projects across kernel fuzzing, adversarial ML, IoT security, and CTF tooling. Also serving as CTF Team Member since Jan 2025 — competed globally, co-ran CSAW CTF 2025 and organised Hack@NYU at Microsoft NYC.</p>
+          </div>
+        </div>
+        <div class="exp-row">
+          <span class="exp-year">2025</span>
+          <div class="exp-body">
+            <h3>Lind Project Researcher — NYU</h3>
+            <p>New York University · Jan 2025 – Present · New York City</p>
+            <p class="exp-detail">OS-level security research using Rust, contributing to the Lind sandbox project — a restricted POSIX environment to safely execute untrusted code via WebAssembly.</p>
+          </div>
+        </div>
+        <div class="exp-row">
+          <span class="exp-year">2023</span>
+          <div class="exp-body">
+            <h3>Cyber Security Researcher — Pentadots Solutions</h3>
+            <p>Full-time · Remote · Oct 2023 – Sep 2025 (2 years)</p>
+            <p class="exp-detail">Executed red-team adversarial simulations across enterprise environments improving defense efficiency by 30%. Architected zero-trust network security frameworks with microsegmentation and least-privilege access controls.</p>
+          </div>
+        </div>
+        <div class="exp-row">
+          <span class="exp-year">2022</span>
+          <div class="exp-body">
+            <h3>E-Drive System Security Intern — Robert Bosch India Ltd.</h3>
+            <p>Coimbatore, India · June 2022 – July 2022</p>
+            <p class="exp-detail">Penetration testing and vulnerability assessment on embedded E-Drive automotive systems. Security analysis of CAN bus communications and firmware hardening.</p>
+          </div>
+        </div>
+        <div class="exp-row">
+          <span class="exp-year">2021</span>
+          <div class="exp-body">
+            <h3>Computer Vision Research Intern — Continental AG</h3>
+            <p>Bangalore, India · Jan 2021 – June 2021</p>
+            <p class="exp-detail">Developed and evaluated computer vision models for automotive safety. Researched adversarial robustness of real-time detection pipelines in safety-critical environments.</p>
+          </div>
+        </div>
+        <div class="exp-row">
+          <span class="exp-year">2019</span>
+          <div class="exp-body">
+            <h3>B.Tech — Electrical &amp; Electronics Engineering, NIT Calicut</h3>
+            <p>National Institute of Technology, Calicut · Aug 2019 – May 2023 · CGPA: 8.2/10</p>
+            <p class="exp-detail">Published research on adaptive distance relay coordination (15% reliability improvement). ISTE Joint Secretary, IEEE IAS/CAS member, Placement Cell Representative, Powerlifting Team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENTS ───────────────────────────── -->
+  <section class="achievements section">
+    <div class="container">
+      <p class="sec-label">ACHIEVEMENTS &amp; HIGHLIGHTS</p>
+      <div class="ach-list">
+        <blockquote class="ach-quote">"MITRE eCTF 2025 — Successfully entered the Attack Phase; one of the most prestigious embedded security competitions in the United States."</blockquote>
+        <blockquote class="ach-quote">"Co-ran CSAW CTF 2025 Qualifiers with OSIRIS Lab at NYU — one of the world's largest student-run cybersecurity competitions, hosting thousands of players across dozens of regions globally."</blockquote>
+        <blockquote class="ach-quote">"Organised Hack@NYU at Microsoft NYC — managing logistics, technical mentorship and stakeholder coordination across Pathway and Sui-based projects."</blockquote>
+        <blockquote class="ach-quote">"Published research on adaptive distance relay coordination at NIT Calicut, improving power system reliability by 15%."</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS GRID ────────────────────────────── -->
+  <section class="skillgrid-sec section">
+    <div class="container">
+      <p class="sec-label">TECH STACK</p>
+      <div class="skillgrid">
+        <div class="sg-col">
+          <h4>Networking &amp; Security</h4>
+          <ul>
+            <li>Network Security Architecture</li>
+            <li>Firewall Config (Cisco ASA)</li>
+            <li>VPN / IPsec / VLAN</li>
+            <li>IDS / IPS</li>
+            <li>Penetration Testing</li>
+            <li>Vulnerability Assessment</li>
+            <li>Incident Response</li>
+          </ul>
+        </div>
+        <div class="sg-col">
+          <h4>Systems &amp; Programming</h4>
+          <ul>
+            <li>Python · C · C++ · Rust · Go</li>
+            <li>Bash / Linux (Ubuntu, Kali)</li>
+            <li>xv6 Kernel Development</li>
+            <li>Docker</li>
+            <li>Process Scheduling</li>
+            <li>System Calls</li>
+            <li>SDL2 / Hardware Emulation</li>
+          </ul>
+        </div>
+        <div class="sg-col">
+          <h4>Protocols &amp; Infrastructure</h4>
+          <ul>
+            <li>TCP/IP · BGP · OSPF</li>
+            <li>DNS / DNSSEC</li>
+            <li>Load Balancing</li>
+            <li>Wireshark · Nmap</li>
+            <li>Cisco IOS</li>
+            <li>iptables / netfilter</li>
+            <li>Ansible (Network Automation)</li>
+          </ul>
+        </div>
+        <div class="sg-col">
+          <h4>Cloud &amp; ML Security</h4>
+          <ul>
+            <li>AWS (EC2, S3, IAM)</li>
+            <li>TensorFlow · PyTorch</li>
+            <li>Adversarial ML</li>
+            <li>CleverHans · ART</li>
+            <li>Model Robustness Testing</li>
+            <li>CI/CD Security</li>
+            <li>Zero-Trust Architecture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG ───────────────────────────────────── -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <p class="sec-label">BLOG</p>
+      <div class="blog-header">
+        <h2 class="blog-title">Thoughts &amp; <em>Write-ups</em></h2>
+        <a href="https://github.com/lutherleo/blog" target="_blank" class="link-arrow">All Posts ↗ <span></span></a>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card neu-card">
+          <div class="bc-top">
+            <span class="bc-tag">CTF Write-up</span>
+            <span class="bc-date">Feb 2026</span>
+          </div>
+          <h3 class="bc-title">How We Ran CSAW CTF 2025: Infrastructure, Moderation &amp; Lessons Learned</h3>
+          <p class="bc-excerpt">A behind-the-scenes look at co-running one of the world's largest student-run cybersecurity competitions — from fixing the competition website at 3am to moderating thousands of global players.</p>
+          <a href="#" class="bc-link">Read More →</a>
+        </article>
+
+        <article class="blog-card neu-card">
+          <div class="bc-top">
+            <span class="bc-tag">Systems Programming</span>
+            <span class="bc-date">Dec 2025</span>
+          </div>
+          <h3 class="bc-title">Building a CHIP-8 Emulator in C: What I Learned About Low-Level Computing</h3>
+          <p class="bc-excerpt">Implementing all 35 CHIP-8 opcodes from scratch gave me hands-on insight into fetch-decode-execute cycles, memory management, and why bitwise operations matter more than you think.</p>
+          <a href="https://www.linkedin.com/posts/lovekush-pranu_programming-c-systemsprogramming-activity-7263965048668581888-s2dU" target="_blank" class="bc-link">Read More →</a>
+        </article>
+
+        <article class="blog-card neu-card">
+          <div class="bc-top">
+            <span class="bc-tag">Adversarial ML</span>
+            <span class="bc-date">May 2025</span>
+          </div>
+          <h3 class="bc-title">PGD vs C&amp;W: Why 90% Accuracy Still Isn't Enough for Robust AI</h3>
+          <p class="bc-excerpt">Validating Madry et al.'s adversarial training on MNIST revealed a crucial gap: models that resist PGD and FGSM attacks still crumble under Carlini-Wagner and distribution shifts.</p>
+          <a href="#" class="bc-link">Read More →</a>
+        </article>
+
+        <article class="blog-card neu-card blog-card-cta">
+          <div class="bc-cta-inner">
+            <div class="bc-cta-icon">✍️</div>
+            <h3>Got a topic in mind?</h3>
+            <p>I write about cybersecurity, CTF challenges, systems programming, and anything else that keeps me up at night.</p>
+            <a href="mailto:lp2989@nyu.edu" class="bc-link">Suggest a topic →</a>
+          </div>
+        </article>
+
+      </div>
+      <p class="blog-note">More posts on <a href="https://github.com/lutherleo/Bandit" target="_blank">OverTheWire Bandit write-ups</a> &amp; <a href="https://github.com/lutherleo/Natas" target="_blank">Natas write-ups</a> on GitHub.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <p class="sec-label">GET IN TOUCH</p>
+      <h2 class="contact-title">
+        Let's secure<br/>something <em>great</em> together.
+      </h2>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p>Whether you have a security challenge, research collaboration, CTF opportunity, or just want to talk — I'm always open to interesting conversations.</p>
+          <div class="contact-links">
+            <a href="mailto:lp2989@nyu.edu" class="c-link">
+              <span class="cl-label">Email</span>
+              <span class="cl-val">lp2989@nyu.edu <span>↗</span></span>
+            </a>
+            <a href="https://github.com/lutherleo" target="_blank" class="c-link">
+              <span class="cl-label">GitHub</span>
+              <span class="cl-val">github.com/lutherleo <span>↗</span></span>
+            </a>
+            <a href="https://www.linkedin.com/in/lovekush-pranu" target="_blank" class="c-link">
+              <span class="cl-label">LinkedIn</span>
+              <span class="cl-val">linkedin.com/in/lovekush-pranu <span>↗</span></span>
+            </a>
+            <div class="c-link">
+              <span class="cl-label">Phone</span>
+              <span class="cl-val">929-414-7472</span>
+            </div>
+            <div class="c-link">
+              <span class="cl-label">Location</span>
+              <span class="cl-val">Brooklyn, New York · Open to Remote</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="cf-row">
+            <div class="cf-group"><input type="text" placeholder="Your name" required /></div>
+            <div class="cf-group"><input type="email" placeholder="your@email.com" required /></div>
+          </div>
+          <div class="cf-group"><input type="text" placeholder="Subject" /></div>
+          <div class="cf-group"><textarea rows="5" placeholder="Tell me about your project or opportunity..." required></textarea></div>
+          <button type="submit" class="btn-send">
+            <span>Send Message</span>
+            <span class="send-arrow">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">LKP.</span>
+        <span class="footer-copy">© 2025 Love Kush Pranu — Cybersecurity Engineer · NYU Tandon '26 · OSIRIS Lab</span>
+        <div class="footer-socials">
+          <a href="https://github.com/lutherleo" target="_blank">GH</a>
+          <a href="https://www.linkedin.com/in/lovekush-pranu" target="_blank">LI</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
