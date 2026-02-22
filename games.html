@@ -67,7 +67,10 @@
           <div class="game-ui">
             <span>SCORE: <span class="game-score" id="snakeScore">0</span></span>
             <span>HI: <span class="game-score" id="snakeHi">0</span></span>
-            <button class="game-btn" id="snakeBtn">START</button>
+            <div style="display:flex;gap:0.5rem;">
+              <button class="game-btn" id="snakePauseBtn" style="background:var(--surface);color:var(--accent);border:1px solid var(--border);" disabled>⏸</button>
+              <button class="game-btn" id="snakeBtn">START</button>
+            </div>
           </div>
           <!-- Mobile D-pad -->
           <div class="dpad" id="dpad" style="justify-self:center;">
@@ -149,14 +152,15 @@ document.querySelectorAll('.mob-item').forEach(a=>a.addEventListener('click',()=
   const canvas = document.getElementById('snakeCanvas');
   const ctx    = canvas.getContext('2d');
   const COLS=20, ROWS=20, CELL=20;
-  const scoreEl = document.getElementById('snakeScore');
-  const hiEl    = document.getElementById('snakeHi');
-  const btn     = document.getElementById('snakeBtn');
+  const scoreEl   = document.getElementById('snakeScore');
+  const hiEl      = document.getElementById('snakeHi');
+  const btn       = document.getElementById('snakeBtn');
+  const pauseBtn  = document.getElementById('snakePauseBtn');
 
   const FOODS = ['0xDE','0xAD','0xBE','0xEF','0xFF','0x00','SYN','ACK','RST','PKT','UDP','TCP','DNS','ARP','HEX','OVF'];
   const GREEN = '#22c55e', DIM = '#0d130d', GRID_C = 'rgba(34,197,94,0.05)';
 
-  let snake, dir, nextDir, food, foodLabel, score, hi, speed, loop, state;
+  let snake, dir, nextDir, food, foodLabel, score, hi, speed, loop, state, paused;
 
   function init() {
     snake   = [{x:10,y:10},{x:9,y:10},{x:8,y:10}];
@@ -164,9 +168,12 @@ document.querySelectorAll('.mob-item').forEach(a=>a.addEventListener('click',()=
     nextDir = {x:1,y:0};
     score   = 0;
     speed   = 140;
+    paused  = false;
     hi      = parseInt(localStorage.getItem('snakeHS')||0);
     hiEl.textContent = hi;
     state   = 'playing';
+    pauseBtn.disabled = false;
+    pauseBtn.textContent = '⏸';
     spawnFood();
     clearInterval(loop);
     loop = setInterval(tick, speed);
@@ -249,22 +256,56 @@ document.querySelectorAll('.mob-item').forEach(a=>a.addEventListener('click',()=
     }
   }
 
+  function togglePause() {
+    if (state !== 'playing' && state !== 'paused') return;
+    paused = !paused;
+    if (paused) {
+      clearInterval(loop);
+      state = 'paused';
+      pauseBtn.textContent = '▶';
+      // draw pause overlay
+      ctx.fillStyle = 'rgba(10,15,10,0.75)';
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+      ctx.fillStyle = GREEN;
+      ctx.shadowBlur = 20; ctx.shadowColor = GREEN;
+      ctx.font = 'bold 18px "JetBrains Mono"';
+      ctx.textAlign = 'center';
+      ctx.fillText('PAUSED', canvas.width/2, canvas.height/2);
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = 'rgba(34,197,94,0.4)';
+      ctx.font = '11px "JetBrains Mono"';
+      ctx.fillText('PRESS ⏸ OR P TO RESUME', canvas.width/2, canvas.height/2+22);
+    } else {
+      state = 'playing';
+      pauseBtn.textContent = '⏸';
+      loop = setInterval(tick, speed);
+    }
+  }
+
   function gameOver() {
     clearInterval(loop);
     state = 'dead';
+    paused = false;
+    pauseBtn.disabled = true;
+    pauseBtn.textContent = '⏸';
     btn.textContent = 'RESTART';
     drawIdle('GAME OVER');
   }
 
-  // Key controls
+  // Key controls — skip preventDefault when hex input is focused
   document.addEventListener('keydown', e => {
-    if (['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key)) e.preventDefault();
+    const hexFocused = document.activeElement === document.getElementById('hexInput');
+    if (!hexFocused && ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','w','a','s','d'].includes(e.key)) e.preventDefault();
+    if (hexFocused) return; // don't steal keys from hex breach input
+    if (e.key === 'p' || e.key === 'P') { togglePause(); return; }
     if (state !== 'playing') return;
     const map = {ArrowUp:{x:0,y:-1},ArrowDown:{x:0,y:1},ArrowLeft:{x:-1,y:0},ArrowRight:{x:1,y:0},
                   w:{x:0,y:-1},s:{x:0,y:1},a:{x:-1,y:0},d:{x:1,y:0}};
     const nd = map[e.key];
     if (nd && !(nd.x===-dir.x && nd.y===-dir.y)) nextDir = nd;
   });
+
+  pauseBtn.addEventListener('click', togglePause);
 
   // D-pad
   function dDir(nd) { if(state==='playing'&&!(nd.x===-dir.x&&nd.y===-dir.y)) nextDir=nd; }
