@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hobbies — Love Kush Pranu</title>
+  <meta name="description" content="What Love Kush Pranu does when he's not hacking." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">Love Kush Pranu</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#work">WORK</a></li>
+      <li><a href="index.html#osiris">RESEARCH</a></li>
+      <li><a href="index.html#experience">HISTORY</a></li>
+      <li><a href="projects.html">PROJECTS</a></li>
+      <li><a href="games.html">GAMES</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mob-menu" id="mobMenu">
+    <a href="index.html#about"      class="mob-item">ABOUT</a>
+    <a href="index.html#work"       class="mob-item">WORK</a>
+    <a href="index.html#osiris"     class="mob-item">RESEARCH</a>
+    <a href="index.html#experience" class="mob-item">HISTORY</a>
+    <a href="projects.html"         class="mob-item">PROJECTS</a>
+    <a href="games.html"            class="mob-item">GAMES</a>
+    <a href="index.html#contact"    class="mob-item">CONTACT</a>
+  </div>
+
+  <div class="page-hero" style="background:var(--bg-2);">
+    <div class="page-hero-inner">
+      <span class="page-hero-eye">BEYOND THE TERMINAL</span>
+      <h1 class="page-hero-title">Not <em>hacking.</em></h1>
+      <p class="page-hero-sub">Security never really switches off — but when I step away from the screen, these are the things that keep me sharp, grounded, and sane.</p>
+    </div>
+  </div>
+
+  <section class="hobbies section" id="hobbies" style="padding-top:5rem;">
+    <div class="container">
+      <div class="hobbies-grid">
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3>CTF Competitions</h3>
+          <p>Competing in Capture the Flag events is my favourite sport. Solving cryptography, pwn, web, and reversing challenges under pressure keeps my offensive skills razor-sharp — and it's genuinely fun.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4v6a6 6 0 0 0 12 0V4"/><line x1="4" y1="20" x2="20" y2="20"/></svg>
+          </div>
+          <h3>Powerlifting</h3>
+          <p>I was on the Powerlifting Team at NIT Calicut and the habit stuck. There's a satisfying symmetry between lifting and debugging — both demand patience, discipline, and knowing exactly where to apply force.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Kernel Tinkering</h3>
+          <p>Modifying OS kernels for fun — not just for research. From patching xv6 with custom syscalls to experimenting with eBPF programs, I enjoy going as low-level as possible.</p>
+        </div>
+
+        <div class="hobby-card neu-card">
+          <div class="hobby-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Reading Research Papers</h3>
+          <p>I read academic security papers for fun — from Madry et al. on adversarial training to classic systems security literature. Staying current with research is what separates a practitioner from a technician.</p>
+        </div>
+
+      </div>
+
+      <!-- Interviews link -->
+      <div style="margin-top:4rem;padding-top:4rem;border-top:1px solid var(--border-dim);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;">
+        <div>
+          <p class="sec-label" style="margin-bottom:0.5rem;">ALSO</p>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);letter-spacing:-0.03em;">I interview interesting people.</h3>
+          <p style="font-size:0.88rem;color:var(--text-dim);margin-top:0.5rem;">Scientists, technologists, creators — conversations at the frontier.</p>
+        </div>
+        <a href="interviews.html" class="btn-resume" style="font-size:0.8rem;padding:0.6rem 1.4rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch Interviews
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">LKP.</span>
+        <span class="footer-copy">© 2025 Love Kush Pranu — Cybersecurity Engineer · NYU Tandon '26 · OSIRIS Lab</span>
+        <div class="footer-socials">
+          <a href="https://github.com/lutherleo" target="_blank">GH</a>
+          <a href="https://www.linkedin.com/in/lovekush-pranu" target="_blank">LI</a>
+          <a href="interviews.html">INTERVIEWS</a>
+          <a href="hobbies.html">HOBBIES</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const cursor=document.getElementById('cursor'),cursorRing=document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+    (function lr(){rx+=(mx-rx)*0.1;ry+=(my-ry)*0.1;cursorRing.style.left=rx+'px';cursorRing.style.top=ry+'px';requestAnimationFrame(lr);})();
+    document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.classList.add('big');cursorRing.classList.add('big');});el.addEventListener('mouseleave',()=>{cursor.classList.remove('big');cursorRing.classList.remove('big');});});
+    document.body.classList.add('loaded');
+    const hamburger=document.getElementById('hamburger'),mobMenu=document.getElementById('mobMenu');
+    hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobMenu.classList.toggle('open');document.body.style.overflow=mobMenu.classList.contains('open')?'hidden':'';});
+    document.querySelectorAll('.mob-item').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobMenu.classList.remove('open');document.body.style.overflow='';}));
+    const obs=new IntersectionObserver(e=>e.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.08});
+    document.querySelectorAll('.hobby-card,.page-hero-inner').forEach((el,i)=>{el.classList.add('reveal');el.style.setProperty('--d',i*80+'ms');obs.observe(el);});
+  </script>
+</body>
+</html>

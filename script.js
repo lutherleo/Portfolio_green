@@ -333,16 +333,40 @@ const sectionObs = new IntersectionObserver(entries => {
 }, { threshold: 0.35 });
 sections.forEach(s => sectionObs.observe(s));
 
-/* ── CONTACT FORM ────────────────────────────────── */
+/* ── CONTACT FORM (Formspree) ────────────────────── */
+/* 1. Go to https://formspree.io → create a free account
+   2. Create a new form → copy the form ID (e.g. "xyzabcde")
+   3. Replace REPLACE_WITH_YOUR_FORM_ID below with that ID     */
+const FORMSPREE_ID = 'REPLACE_WITH_YOUR_FORM_ID';
+
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('.btn-send span:first-child');
-    btn.textContent = 'Sending…';
-    setTimeout(() => {
-      form.innerHTML = `<div class="form-sent">"Thanks for reaching out.<br/>I'll get back to you soon."</div>`;
-    }, 1200);
+    const btn      = form.querySelector('.btn-send');
+    const btnLabel = btn.querySelector('span:first-child');
+    btnLabel.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method:  'POST',
+        body:    new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.innerHTML = `<div class="form-sent">"Thanks for reaching out.<br/>I'll get back to you soon."</div>`;
+      } else {
+        const data = await res.json();
+        btnLabel.textContent = 'Try Again';
+        btn.disabled = false;
+        alert(data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Email me at lp2989@nyu.edu');
+      }
+    } catch {
+      btnLabel.textContent = 'Try Again';
+      btn.disabled = false;
+      alert('Network error. Please email me directly at lp2989@nyu.edu');
+    }
   });
 }
 
