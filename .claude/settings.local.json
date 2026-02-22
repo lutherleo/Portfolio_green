@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:www.youtube.com)",
-      "WebFetch(domain:www.wechall.net)",
-      "WebFetch(domain:ctftime.org)"
-    ]
-  }
-}
