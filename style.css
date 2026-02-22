@@ -492,8 +492,8 @@ body.loaded { opacity: 1; }
   .ach-quote   { font-size:1.1rem; }
   .skillgrid   { grid-template-columns:1fr; }
   .about-stat-cards { grid-template-columns:1fr; }
-  .hobbies-grid { grid-template-columns:1fr; }
   .interviews-grid { grid-template-columns:1fr; }
+  .hobbies-grid { grid-template-columns:1fr; }
 }
 
 /* ─── HOBBIES ────────────────────────────────────── */
@@ -542,7 +542,7 @@ body.loaded { opacity: 1; }
 }
 .interview-play-circle svg { margin-left:4px; }
 
-/* ─── CTFtime / WeChall PROFILE BADGES ───────────── */
+/* ─── CTFtime PROFILE CARD ───────────────────────── */
 .ctf-profiles { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; }
 .ctf-profile-badge {
   display:flex; align-items:center; gap:0.6rem;
